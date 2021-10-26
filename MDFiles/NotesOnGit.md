@@ -110,3 +110,47 @@ git add .
 > this command adds all the files from our root of project directory recursively to the staging area.
 
 ### Committing Changes
+
+TO commit the files from the staging area to the git repository run the following command.
+```bash
+git commit -m "Our message for commit."
+```
+However it is essential sometimes to write a long description for our commit to explain the changes. Then we run the command:
+```bash
+git commit
+```
+> It opens up the commit message in our default editor where in first line we can write our short message of 80 chars long followed by long description in the next line.
+
+### Best Practices for git commits
+1. Commit size matters: Our git commits shouldn't be of large size neither the smallest too.
+
+2. Try to commit often. Each commit should make logically sense.
+
+3. Don't mixup the various logical or code for different issues. One commit should fix a single issue.
+
+4. Use the past tense. Action followed by the noun.
+
+### Skipping the Staging Area
+We can skip the process for staging our files to staging area overall and use command:
+```bash
+git commit -am "Commit message"
+```
+It still works but it is not best practice to directly commit changes to the git repository. Only do so if you are sure that your files don't need to be reviewed.
+
+### Removing Files
+Removing the file is done by simple bash or cmd command but git flags it as modified because it is still present in our staging area. We can verify this by running command:
+```bash
+git ls-files
+```
+It is then essential for us to run command:
+```bash
+git add deletedfilename.txt
+git commit -m "Deleted deletedfilename.txt"
+```
+
+This whole operation can be simply handled by single command:
+```bash
+git rm deletedfilename.txt
+```
+
+### Renaming or Moving Files
