@@ -74,3 +74,39 @@ We can handle this issue by configuring the config file for core.autocrlf proper
 ```bash
 $ git config --global core.autocrlf input
 ```
+
+ ## Creating Snapshots
+
+### Creating Git Repository
+Lets start by making a directory for our project. To make it a git repository run the command:
+ ```bash
+git init
+ ```
+
+### Git Basic Workflow
+What are the basis of git workflow. We have two directories now. One that is our project directory and another is the hidden .git directory/repository.
+
+- First We Modify some files in our project directory. We then commit it to git repository. This is called taking snapshot.
+
+- Concept of **Staging Area**. It is an conceptual place where we propose our next snapshot or commit. If after review we think its good to go, We go ahead and commit changes to our git repository.
+
+- Every git commits are unique and identified by ID and contains information about Message, Date/Time, Author and Complete Snapshot of the files during that commit.
+
+### Staging files
+Git automatically doesn't stages all the files that we create in our project. We manually have to store them to the staging area. We can check on the overall status of the project by running following command:
+```bash
+git status
+```
+It lists us the files in our project directory that are being tracked or are not tracked.
+
+We can add files to our staging area by running following command.
+```bash
+git add filename1 filename2
+```
+or we can add all files at once by running command:
+```bash
+git add .
+```
+> this command adds all the files from our root of project directory recursively to the staging area.
+
+### Committing Changes
