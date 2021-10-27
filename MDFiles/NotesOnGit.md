@@ -107,7 +107,7 @@ or we can add all files at once by running command:
 ```bash
 git add .
 ```
-> this command adds all the files from our root of project directory recursively to the staging area.
+> This command adds all the files from our root of project directory recursively to the staging area.
 
 ### Committing Changes
 
@@ -154,3 +154,36 @@ git rm deletedfilename.txt
 ```
 
 ### Renaming or Moving Files
+Files can be moved by using command:
+```bash
+mv file1.txt savedas.js
+```
+> This saves file file1.txt as savedas.js and file1.txt is deleted. Don't forget
+to add the new file to stage the file.
+
+Both renaming and adding file to staging area can be performed by single command:
+```bash
+git mv file1.txt savedas.js
+```
+> Changes are made to working directory and staged directory at the same time.
+
+### Ignoring Files
+
+It is necessary to ignore some files as it just increases the overhead for the project. It can be done by creating a file **.gitignore** on the root of the working directory. Files that needs to be ignored by simply putting every kind in
+new line. *Regex* can be used to define multiple files and the relative paths to the file. However, if the file had already been committed to the git repository the gitignore is not going to work.
+
+**Note: To solve this issue file or directory should be removed from the staging area and then commit to git repository. This can be achieved by following command:**
+
+```bash
+"--cached flag removes file only from the staging area."
+git rm --cached filenameORdirname
+```
+Various projects produces temporary files not necessary to be tracked. More information on this can be found at: [https://github.com/github/gitignore](https://github.com/github/gitignore)
+
+### Git Short Status
+The command `git status` results in very long description. Instead it can be supplied by flag -s for short to display short status message.
+```bash
+> git status -s
+A  file1.js
+M  file2.txt
+```
