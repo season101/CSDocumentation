@@ -219,3 +219,12 @@ To show log in short summary use flag `--oneline`.
 To show log in reverse order use flag `--reverse`.
 
 ### Viewing the Commit
+We want to see the codes in the commit. Then we can do it by two ways using command:
+
+```bash
+git show commitID
+```
+**OR**
+```bash
+git show Head~noOfCommitBack
+```
