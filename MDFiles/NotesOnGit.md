@@ -187,3 +187,9 @@ The command `git status` results in very long description. Instead it can be sup
 A  file1.js
 M  file2.txt
 ```
+
+### Viewing Staged Files
+Before committing your files to git repository, make sure you review your changes in the staging area. For this we use
+`git diff --staged` to view the changes in the files in the terminal. It shows what codes are going to be committed to the git repository.
+**Changes in the old files are indicated by -- sign and changes in the new files are added by the ++ sign**.
+Also `git diff` only shows us the changes between working directory and staging area.
