@@ -233,3 +233,5 @@ It still only shows us the changes made in files. To see the whole snapshot of f
 git ls-tree
 ```
 On the result, directory are represented by the tree and files are represented by the blob.
+
+> Git show shows us the Git Objects. These objects can be Commits, Blob(Files), Trees(Directories) or Tags
