@@ -228,3 +228,8 @@ git show commitID
 ```bash
 git show Head~noOfCommitBack
 ```
+It still only shows us the changes made in files. To see the whole snapshot of files we need to run the command:
+```bash
+git ls-tree
+```
+On the result, directory are represented by the tree and files are represented by the blob.
