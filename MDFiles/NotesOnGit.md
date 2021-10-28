@@ -193,3 +193,29 @@ Before committing your files to git repository, make sure you review your change
 `git diff --staged` to view the changes in the files in the terminal. It shows what codes are going to be committed to the git repository.
 **Changes in the old files are indicated by -- sign and changes in the new files are added by the ++ sign**.
 Also `git diff` only shows us the changes between working directory and staging area.
+
+### Visual Diff Tools
+How to setup vscode to be our default diff viewer.
+```bash
+git config --global diff.tool vscode
+```
+
+```bash
+git config --global difftool.vscode.cmd "code --wait -diff $LOCAL $REMOTE"
+```
+> After this is done we can check on our global config file to make sure this configuration have been saved or not.
+
+To now lunch the visual diff tool, Run command : `git difftool`
+similarly we can pass command : `git difftool --staged`
+
+### Viewing the History
+We can check our git commit history by running command:
+```bash
+git log
+```
+> It shows all of our git commits sorted from latest to earliest.
+
+To show log in short summary use flag `--oneline`.
+To show log in reverse order use flag `--reverse`.
+
+### Viewing the Commit
