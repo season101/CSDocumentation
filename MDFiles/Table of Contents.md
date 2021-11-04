@@ -2,7 +2,7 @@
 
 ## 1. [Introduction](README.md)
 
-1. [Markdown Cheat](/MDFiles/MarkdownCheatsheet)
+1. [Markdown Cheat](/MDFiles/MarkdownCheatsheet.md)
 
 2. [SSH]()
 
