@@ -8,8 +8,8 @@
 
 ## 2. Git
 
-  1. [Notes on Git](MDFiles/NotesOnGit.md)
-  2. [SSH to Github](MDFiles/SSHtoGithub.md)
+  1. [Notes on Git](/MDFiles/NotesOnGit.md)
+  2. [SSH to Github](/MDFiles/SSHtoGithub.md)
   3. [Git Cheat]()
 
 ## 3. VS Code
